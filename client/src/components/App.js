@@ -7,8 +7,8 @@ const App = () => {
 
   useEffect(() => {
     dispatch(getCards());
-  }, []);
-
+  });
+  
   return (
     <div>
       App Component
