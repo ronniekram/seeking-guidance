@@ -1,0 +1,53 @@
+@import '../../../assets/styles/variables.scss';
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+
+  .header {
+    font-family: $secondaryFont;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    h1 {
+      letter-spacing: -3px;
+      font-size: 4rem;
+    }
+
+    h2 {
+      letter-spacing: -1px;
+      font-size: 1.5rem;
+      color: $accent;
+    }
+  }
+
+  .summary {
+    padding: 3rem;
+    text-align: justify;
+    p {
+      line-height: 19px;
+      letter-spacing: -.75px;
+      font-size: 15px;
+    }
+  }
+
+  .sword {
+
+  }
+
+  .directions {
+    h4 {
+      line-height: 19px;
+      letter-spacing: -.5px;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    p {
+      line-height: 15px;
+      letter-spacing: -.75px;
+      font-size: 14px;
+    }
+
+  }
+}

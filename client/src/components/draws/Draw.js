@@ -12,8 +12,8 @@ const Draw = () => {
     if (currentDraw) {
       return (
         <div>
-          <h1>{currentDraw.question}</h1>
-          <h3>{currentDraw.created_date}</h3>
+          {/* <h1>{currentDraw.question}</h1>
+          <h3>{currentDraw.created_date}</h3> */}
           <div>
             <Cards cards={currentDraw.cards} />
           </div>

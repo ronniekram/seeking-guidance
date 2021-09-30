@@ -5,6 +5,7 @@ import Draws from './draws/Draws';
 import Draw from './draws/Draw';
 import { getCards } from '../redux/actions/card';
 import { getDraws } from '../redux/actions/draw';
+import styles from '../assets/styles/app.module.css';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -15,10 +16,9 @@ const App = () => {
   });
   
   return (
-    <div>
+    <div className={styles.app}>
       <Router>
-        <h1>Seeking Guidance</h1>
-        <NavLink to="/draws">All Draws</NavLink>
+        {/* <NavLink to="/draws">All Draws</NavLink> */}
         <Switch>
           <Route exact path="/draws" component={Draws} />
 
@@ -26,6 +26,9 @@ const App = () => {
 
         </Switch>
       </Router>
+      <div className={styles.title}>
+        <h1>Seeking Guidance</h1>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,24 @@
+@import '../styles//variables.scss';
+
+.app {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  height: 100vh;
+  position: relative;
+
+  .title {
+    position: fixed;
+    bottom: 2.5rem;
+    h1 {    
+      margin: 0;
+    
+      line-height: 1rem;
+      letter-spacing: -3px;
+      font-family: $secondaryFont;
+      font-size: 6rem;
+    
+      text-transform: uppercase;
+    }
+  }
+}

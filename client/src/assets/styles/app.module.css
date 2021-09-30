@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display+SC:wght@400;700&display=swap");
+.app {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  height: 100vh;
+  position: relative;
+}
+.app .title {
+  position: fixed;
+  bottom: 2.5rem;
+}
+.app .title h1 {
+  margin: 0;
+  line-height: 1rem;
+  letter-spacing: -3px;
+  font-family: "Playfair Display SC";
+  font-size: 6rem;
+  text-transform: uppercase;
+}

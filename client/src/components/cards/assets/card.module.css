@@ -1,2 +1,39 @@
-
-/*# sourceMappingURL=card.module.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display+SC:wght@400;700&display=swap");
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.container .header {
+  font-family: "Playfair Display SC";
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.container .header h1 {
+  letter-spacing: -3px;
+  font-size: 4rem;
+}
+.container .header h2 {
+  letter-spacing: -1px;
+  font-size: 1.5rem;
+  color: #D93208;
+}
+.container .summary {
+  padding: 3rem;
+  text-align: justify;
+}
+.container .summary p {
+  line-height: 19px;
+  letter-spacing: -0.75px;
+  font-size: 15px;
+}
+.container .directions h4 {
+  line-height: 19px;
+  letter-spacing: -0.5px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.container .directions p {
+  line-height: 15px;
+  letter-spacing: -0.75px;
+  font-size: 14px;
+}
