@@ -5,19 +5,15 @@ const Cards = ({ cards }) => {
 
   const renderCards = () => {
     if (cards) {
-      return cards.map(card => {
-        return <Card card={card} key={card.id} />
-      })
+      return cards.map((card) => {
+        return <Card card={card} key={card.id} />;
+      });
     } else {
-      return "Loading..."
+      return "Loading...";
     };
   };
 
-  return (
-    <div>
-      {renderCards()}
-    </div>
-  );
+  return <div>{renderCards()}</div>;
 };
 
 export default Cards;

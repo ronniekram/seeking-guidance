@@ -20,7 +20,7 @@ const Draw = () => {
         </div>
       );
     } else {
-      return "Loading..."
+      return "Loading...";
     };
   };
 
