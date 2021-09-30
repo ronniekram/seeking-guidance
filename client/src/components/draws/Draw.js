@@ -6,13 +6,23 @@ const Draw = () => {
   const { draws } = useSelector(state => state.draws);
   const { id } = useParams();
   const currentDraw = draws && draws.find(draw => draw.id === parseInt(id));
-  // const id = parseInt(params.id)
-  console.log(currentDraw)
+
+  const renderDraw = () => {
+    if (currentDraw) {
+      return (
+        <div>
+          <h1>{currentDraw.question}</h1>
+          <h3>{currentDraw.created_date}</h3>
+        </div>
+      );
+    } else {
+      return "Loading..."
+    };
+  };
 
   return (
     <div>
-      <h1>{currentDraw.question}</h1>
-      <h3>{currentDraw.created_date}</h3>
+      {renderDraw()}
     </div>
   );
 };

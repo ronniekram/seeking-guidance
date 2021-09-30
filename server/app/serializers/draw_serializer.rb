@@ -3,6 +3,6 @@ class DrawSerializer < ActiveModel::Serializer
   has_many :cards
 
   def created_date
-    object.created_at.strftime("asked %m/%d/%Y at %l:%M%P") 
+    object.created_at.strftime("%m/%d/%Y %l:%M%P") 
   end
 end
