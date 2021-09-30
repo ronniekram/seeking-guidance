@@ -1,7 +1,7 @@
 class DrawsController < ApplicationController
 
   def index
-    draws = Draw.all 
+    draws = Draw.all
     if draws 
       render json: draws, include: [:cards] 
     else

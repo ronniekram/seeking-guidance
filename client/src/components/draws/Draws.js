@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import DrawForm from './DrawForm';
+import Spinner from '../layout/Spinner';
 
 const Draws = () => {
+  // const [loading, setLoading] = useState(true);
   const {draws} = useSelector(state => state.draws);
 
   const renderDraws = () => {
     return (
-      draws &&
       draws.map((draw) => {
         return (
           <p key={draw.id}>
@@ -17,6 +18,14 @@ const Draws = () => {
         );
       })
     );
+  };
+
+  const renderLoading = () => {
+    if (!draws) {
+      return <Spinner />;
+    } else {
+      renderDraws();
+    };
   };
 
   return (

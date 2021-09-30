@@ -20,7 +20,6 @@ const App = () => {
         <h1>Seeking Guidance</h1>
         <NavLink to="/draws">All Draws</NavLink>
         <Switch>
-
           <Route exact path="/draws" component={Draws} />
 
           <Route path="/draws/:id" component={Draw} />
