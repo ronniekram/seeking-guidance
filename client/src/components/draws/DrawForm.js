@@ -1,12 +1,16 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useFormik } from 'formik';
+import Input from '../forms/Input';
+import Button from '../forms/Input';
 import { postDraw } from '../../redux/actions/draw';
 
 const DrawForm = () => {
   // add num column to draw on backend to allow choice of num of cards
+
   const dispatch = useDispatch();
 
+  // formik values returns an object -- not iterable
   const formik = useFormik({
     initialValues: {
       question: '',
@@ -17,19 +21,19 @@ const DrawForm = () => {
     }
   });
 
+  console.log(formik.values)
   return (
     <div>
       <form onSubmit={formik.handleSubmit}>
-        <input 
+        <Input
           id="question"
           name="question"
           type="text"
-          value={formik.question}
-          onChange={formik.handleChange}
+          value={formik.values.question}
+          handleChange={formik.handleChange}
         />
 
-        <button>Draw</button>
-
+        <Button type="submit" text="Draw" />
       </form>
     </div>
   );
