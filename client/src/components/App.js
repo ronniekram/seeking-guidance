@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import DrawForm from './draws/DrawForm';
+import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
+import Draws from './draws/Draws';
 import { getCards } from '../redux/actions/card';
 import { getDraws } from '../redux/actions/draw';
 
@@ -14,8 +15,17 @@ const App = () => {
   
   return (
     <div>
-      App Component
-      <DrawForm />
+      <Router>
+        <h1>Seeking Guidance</h1>
+        <NavLink to="/draws">All Draws</NavLink>
+        <Switch>
+
+          <Route exact path="/draws" component={Draws} />
+
+          <Route path="/draws/:id" component={Draws} />
+
+        </Switch>
+      </Router>
     </div>
   );
 };

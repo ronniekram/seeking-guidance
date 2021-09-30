@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useFormik } from 'formik';
 import { postDraw } from '../../redux/actions/draw';
