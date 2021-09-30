@@ -21,10 +21,10 @@ const DrawForm = () => {
     }
   });
 
-  console.log(formik.values)
   return (
     <div>
       <form onSubmit={formik.handleSubmit}>
+        
         <Input
           id="question"
           name="question"
