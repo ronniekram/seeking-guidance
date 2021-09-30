@@ -12,7 +12,7 @@ const Draws = () => {
       draws.map((draw) => {
         return (
           <p key={draw.id}>
-            {draw.question} {draw.created_date}
+            <NavLink to={`/draws/${draw.id}`}>{draw.question} {draw.created_date}</NavLink>
           </p>
         );
       })

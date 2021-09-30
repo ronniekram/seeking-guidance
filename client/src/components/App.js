@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
 import Draws from './draws/Draws';
+import Draw from './draws/Draw';
 import { getCards } from '../redux/actions/card';
 import { getDraws } from '../redux/actions/draw';
 
@@ -22,7 +23,7 @@ const App = () => {
 
           <Route exact path="/draws" component={Draws} />
 
-          <Route path="/draws/:id" component={Draws} />
+          <Route path="/draws/:id" component={Draw} />
 
         </Switch>
       </Router>
