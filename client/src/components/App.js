@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import DrawForm from './draws/DrawForm';
 import { getCards } from '../redux/actions/card';
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
   return (
     <div>
       App Component
+      <DrawForm />
     </div>
   );
 };

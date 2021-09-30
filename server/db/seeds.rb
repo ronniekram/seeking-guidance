@@ -21,3 +21,7 @@ cards_array.each do |card|
     desc: card["desc"]
     )
  end
+
+ Draw.create(question: 'Hey ma', card_ids: [3, 6, 9])
+ Draw.create(question: "Let's slide", card_ids: [69, 42, 1])
+ Draw.create(question: 'Alright.', card_ids: [22, 3, 42])
