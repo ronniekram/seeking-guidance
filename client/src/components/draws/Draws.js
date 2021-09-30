@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import DrawForm from './DrawForm';
 import Spinner from '../layout/Spinner';
 
 const Draws = () => {
-  // const [loading, setLoading] = useState(true);
   const {draws} = useSelector(state => state.draws);
 
   const renderDraws = () => {
