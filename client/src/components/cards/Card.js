@@ -1,5 +1,5 @@
 import React from 'react';
-import Sword from '../../assets/svgs/SWORD.svg';
+import sword from '../../assets/svgs/sword.svg';
 import styles from './assets/card.module.css';
 
 const Card = ({ card }) => {
@@ -15,14 +15,14 @@ const Card = ({ card }) => {
             <h2>{cardType} Arcana</h2>
           </div>
 
-          <div className={styles.header}>
+          <div className={styles.summary}>
             {/* Card Summary */}
             <p>{summary}</p>
           </div>
 
           <div>
             {/* Sword Image */}
-            <Sword className={styles.sword} />
+            <img src={sword} alt="It's a sword." />
           </div>
 
           <div className={styles.directions}>

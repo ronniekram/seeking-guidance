@@ -22,6 +22,7 @@
   text-align: justify;
 }
 .container .summary p {
+  font-family: "Inter";
   line-height: 19px;
   letter-spacing: -0.75px;
   font-size: 15px;

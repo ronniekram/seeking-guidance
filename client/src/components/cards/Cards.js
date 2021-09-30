@@ -5,10 +5,6 @@ import styles from './assets/cards.module.css';
 const Cards = ({ cards }) => {
   const [card, setCard] = useState(null);
 
-  const handleClick = (card) => {
-    setCard(card);
-  };
-
   const renderCards = () => {
     if (cards) {
       return cards.map(card => {
@@ -16,7 +12,7 @@ const Cards = ({ cards }) => {
           <div className={styles.card}>
             <img 
               src={card.image} 
-              handleClick={() => {setCard(card)} } 
+              onClick={() => {setCard(card)} } 
               alt={card.name} 
             />
           </div>
@@ -32,7 +28,7 @@ const Cards = ({ cards }) => {
       </section>
 
       <section className={styles.cards}>
-
+        {renderCards()}
       </section>
     </article>
   )

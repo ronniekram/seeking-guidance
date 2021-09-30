@@ -24,7 +24,9 @@
   .summary {
     padding: 3rem;
     text-align: justify;
+
     p {
+      font-family: $primaryFont;
       line-height: 19px;
       letter-spacing: -.75px;
       font-size: 15px;
