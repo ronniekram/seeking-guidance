@@ -7,27 +7,18 @@ const DrawForm = () => {
   // dispatch(postDraw(values));
   const dispatch = useDispatch();
   const [question, setQuestion] = useState('');
-  const [ids, setIds] = useState([]);
-
-  const generateCards = () => {
-    for (let i = 0; i < 3; i++) {
-      const randomId = Math.floor(Math.random() * 78);
-      setIds([...ids, randomId]);
-    };
-  };
 
   const handleClick = () => {
     const drawObj = {
       question,
-      card_ids: ids
     }
-    generateCards()
-    dispatch(postDraw(drawObj))
+    dispatch(postDraw(drawObj));
+    setQuestion('');
   };
 
   return (
     <div>
-      <input type="text" onChange={(e) => setQuestion(e.target.value)} />
+      <input type="text" onChange={(e) => setQuestion(e.target.value)} value={question} />
       <button onClick={handleClick}>Draw</button>
     </div>
   );

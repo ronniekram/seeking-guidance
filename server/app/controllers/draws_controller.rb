@@ -20,6 +20,8 @@ class DrawsController < ApplicationController
 
   def create
     draw = Draw.create(draw_params)
+    draw.update(cards: Card.all.sample(3))
+    
     if draw.save
       render json: draw, include: [:cards] 
     else 
@@ -30,6 +32,6 @@ class DrawsController < ApplicationController
   private
 
   def draw_params
-    params.permit(:question, :card_ids)
+    params.require(:draw).permit(:question)
   end
 end
