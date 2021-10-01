@@ -14,7 +14,7 @@ export const getDraws = () => dispatch => {
   });
 };
 
-export const postDraw = drawObj => dispatch => {
+export const postDraw = (drawObj, history) => dispatch => {
   return fetch(`${baseUrl}/draws`, {
     method: 'POST',
     headers: {
@@ -25,7 +25,10 @@ export const postDraw = drawObj => dispatch => {
   })
   .then(resp => {
     if (resp.ok) {
-      return resp.json().then(draw => dispatch({ type: POST_DRAW, payload: draw }))
+      return resp.json().then(draw => {
+        dispatch({ type: POST_DRAW, payload: draw });
+        history.push(`/draws/${draw.id}`)
+      })
     } else {
       return Promise.reject();
     }

@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { postDraw } from '../../redux/actions/draw';
 import styles from './assets/drawform.module.css';
 
 const DrawForm = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const [question, setQuestion] = useState('');
 
-  const handleSubmit = () => {
-    dispatch(postDraw({ question }));
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(postDraw({ question }, history));
     setQuestion('');
   };
 

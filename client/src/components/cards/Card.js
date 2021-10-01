@@ -7,7 +7,7 @@ const Card = ({ card, setInProp }) => {
   useEffect(() => {
     setTimeout(() => {
       setInProp(false);
-    }, 1000)
+    }, 1200)
   });
 
   const renderCard = () => {
