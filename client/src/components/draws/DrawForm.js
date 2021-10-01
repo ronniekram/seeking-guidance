@@ -23,15 +23,15 @@ const DrawForm = () => {
 
       <form onSubmit={handleSubmit}>
 
-        <Input
+        <input
           id="question"
           name="question"
           type="text"
           value={question}
-          handleChange={(e) => setQuestion(e.target.value)}
+          handleChange={(e) => setQuestion(e.target.value)} 
         />
 
-        <Button type="submit" text="Ask" />
+        <button>Ask</button>
       </form>
     </div>
   );
