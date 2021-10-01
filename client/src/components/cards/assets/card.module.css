@@ -2,6 +2,7 @@
 .container {
   display: flex;
   flex-flow: column nowrap;
+  padding: 2rem;
 }
 .container .header {
   font-family: "Playfair Display SC";
@@ -12,7 +13,7 @@
   margin: 0;
   line-height: auto;
   letter-spacing: -3px;
-  font-size: 3.5rem;
+  font-size: 3.25rem;
   text-align: left;
 }
 .container .header h2 {
@@ -29,9 +30,9 @@
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
 }
 .container .text .summary {
+  margin-top: 1rem;
   text-align: justify;
 }
 .container .text .summary p {
@@ -42,6 +43,7 @@
 }
 .container .text .sheath {
   margin: 0;
+  padding: 0.5rem 0;
   display: flex;
   justify-content: center;
 }
@@ -62,6 +64,7 @@
   text-transform: uppercase;
 }
 .container .text .directions p {
+  margin-top: -0.5rem;
   padding: 0;
   line-height: 15px;
   letter-spacing: -0.5px;

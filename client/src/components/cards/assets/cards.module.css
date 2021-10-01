@@ -7,8 +7,8 @@
   padding: 0 1rem;
 }
 .container .cardInfo {
-  min-width: 36%;
-  width: 36%;
+  min-width: 35%;
+  width: 35%;
 }
 .container .cards {
   display: flex;
@@ -16,7 +16,7 @@
   justify-content: space-between;
   min-width: 60%;
   width: 60%;
-  margin-left: 1rem;
+  margin-left: 1.5rem;
 }
 .container .cards .card img {
   max-width: 85%;

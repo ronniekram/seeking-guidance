@@ -3,6 +3,7 @@
 .container {
   display: flex;
   flex-flow: column nowrap;
+  padding: 2rem;
 
   .header {
     font-family: $secondaryFont;
@@ -13,7 +14,7 @@
       margin: 0;
       line-height: auto;
       letter-spacing: -3px;
-      font-size: 3.5rem;
+      font-size: 3.25rem;
       text-align: left;
     }
 
@@ -33,10 +34,9 @@
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
 
     .summary {
-      // padding: .25rem;
+      margin-top: 1rem;
       text-align: justify;
   
       p {
@@ -49,6 +49,7 @@
 
     .sheath {
       margin: 0;
+      padding: .5rem 0;
       display: flex;
       justify-content: center;
       .sword {
@@ -71,6 +72,7 @@
       }
   
       p {
+        margin-top: -.5rem;
         padding: 0;
         line-height: 15px;
         letter-spacing: -.5px;
