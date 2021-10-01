@@ -12,16 +12,15 @@ cards_array = JSON.parse(cards)['cards']
 cards_array.each do |card|
     Card.create(
     name: card["name"],
-    suit: card["suit"],
     cardType: card["cardType"],
     summary: card["summary"],
     image: card["image"],
     upright: card["meaning_up"],
     reversed: card["meaning_rev"],
-    desc: card["desc"]
+    rightSide: [true, false].sample
     )
  end
 
- Draw.create(question: 'Hey ma', card_ids: [3, 6, 9])
- Draw.create(question: "Let's slide", card_ids: [69, 42, 1])
- Draw.create(question: 'Alright.', card_ids: [22, 3, 42])
+5.times do 
+  Draw.create(question: Faker::Quote.jack_handey)
+end
