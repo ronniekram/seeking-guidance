@@ -10,46 +10,68 @@
     text-transform: uppercase;
 
     h1 {
+      margin: 0;
+      line-height: auto;
       letter-spacing: -3px;
       font-size: 4rem;
+      text-align: left;
     }
 
     h2 {
+      margin: 0;
+      line-height: 1rem;
       letter-spacing: -1px;
       font-size: 1.5rem;
       color: $accent;
+      text-align: right;
     }
   }
 
-  .summary {
-    padding: 3rem;
-    text-align: justify;
+  .text {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 2.5rem;
 
-    p {
-      font-family: $primaryFont;
-      line-height: 19px;
-      letter-spacing: -.75px;
-      font-size: 15px;
-    }
-  }
-
-  .sword {
-
-  }
-
-  .directions {
-    h4 {
-      line-height: 19px;
-      letter-spacing: -.5px;
-      font-size: 1rem;
-      font-weight: 700;
+    .summary {
+      // padding: 3rem;
+      text-align: justify;
+  
+      p {
+        font-family: $primaryFont;
+        line-height: 19px;
+        letter-spacing: -.75px;
+        font-size: 15px;
+      }
     }
 
-    p {
-      line-height: 15px;
-      letter-spacing: -.75px;
-      font-size: 14px;
+    .sheath {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      .sword {
+        width: 60%;
+        height: auto;
+      }
     }
+  
+    .directions {
+      h4 {
+        line-height: 19px;
+        letter-spacing: -.5px;
+        font-size: 1rem;
+        font-weight: 700;
 
+        text-transform: uppercase;
+      }
+  
+      p {
+        line-height: 15px;
+        letter-spacing: -.75px;
+        font-size: 14px;
+      }
+  
+    }
   }
 }

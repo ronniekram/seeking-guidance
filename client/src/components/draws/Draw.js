@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Cards from '../cards/Cards';
+import styles from './assets/draw.module.css';
 
 const Draw = () => {
   const { draws } = useSelector(state => state.draws);
@@ -11,7 +12,7 @@ const Draw = () => {
   const renderDraw = () => {
     if (currentDraw) {
       return (
-        <div>
+        <div className={styles.draw}>
           {/* <h1>{currentDraw.question}</h1>
           <h3>{currentDraw.created_date}</h3> */}
           <div>

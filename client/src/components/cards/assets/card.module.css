@@ -9,31 +9,53 @@
   text-transform: uppercase;
 }
 .container .header h1 {
+  margin: 0;
+  line-height: auto;
   letter-spacing: -3px;
   font-size: 4rem;
+  text-align: left;
 }
 .container .header h2 {
+  margin: 0;
+  line-height: 1rem;
   letter-spacing: -1px;
   font-size: 1.5rem;
   color: #D93208;
+  text-align: right;
 }
-.container .summary {
-  padding: 3rem;
+.container .text {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2.5rem;
+}
+.container .text .summary {
   text-align: justify;
 }
-.container .summary p {
+.container .text .summary p {
   font-family: "Inter";
   line-height: 19px;
   letter-spacing: -0.75px;
   font-size: 15px;
 }
-.container .directions h4 {
+.container .text .sheath {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.container .text .sheath .sword {
+  width: 60%;
+  height: auto;
+}
+.container .text .directions h4 {
   line-height: 19px;
   letter-spacing: -0.5px;
   font-size: 1rem;
   font-weight: 700;
+  text-transform: uppercase;
 }
-.container .directions p {
+.container .text .directions p {
   line-height: 15px;
   letter-spacing: -0.75px;
   font-size: 14px;

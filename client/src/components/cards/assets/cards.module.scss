@@ -8,19 +8,22 @@
   padding: 0 2rem;
 
   .cardInfo {
-    width: 35%
+    min-width: 36%;
+    width: 36%
   }
 
   .cards {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    min-width: 60%;
     width: 60%;
 
     .card {
 
       img {
-        max-width: 100%;
+        max-width: 90%;
+        width: 90%;
         height: auto;
         border: 8px solid #FFFBEC;
         border-radius: .5rem;

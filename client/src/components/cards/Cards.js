@@ -3,7 +3,7 @@ import Card from './Card';
 import styles from './assets/cards.module.css';
 
 const Cards = ({ cards }) => {
-  const [card, setCard] = useState(null);
+  const [card, setCard] = useState(cards[0]);
 
   const renderCards = () => {
     if (cards) {

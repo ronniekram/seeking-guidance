@@ -7,16 +7,19 @@
   padding: 0 2rem;
 }
 .container .cardInfo {
-  width: 35%;
+  min-width: 36%;
+  width: 36%;
 }
 .container .cards {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  min-width: 60%;
   width: 60%;
 }
 .container .cards .card img {
-  max-width: 100%;
+  max-width: 90%;
+  width: 90%;
   height: auto;
   border: 8px solid #FFFBEC;
   border-radius: 0.5rem;
