@@ -9562,6 +9562,11 @@ react-app-polyfill@^2.0.0:
     regenerator-runtime "^0.13.7"
     whatwg-fetch "^3.4.1"
 
+react-css-burger@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/react-css-burger/-/react-css-burger-0.2.0.tgz#6b85f6855c1c0d9af136e7043d5c21f3de565874"
+  integrity sha512-q2ifct44rVXvLmVr1NeOcMsaeKQWGFaTaUCicF0ynekM8kK5ATpizV2PurgP1hnQntbWRVizCqmKE9JwoDmZNA==
+
 react-dev-utils@^11.0.3:
   version "11.0.4"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-11.0.4.tgz#a7ccb60257a1ca2e0efe7a83e38e6700d17aa37a"

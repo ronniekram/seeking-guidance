@@ -7,10 +7,10 @@
   height: 100%;
   position: relative;
 }
-.app .icons {
+.app .burger {
   position: absolute;
   left: 0;
-  bottom: 0;
+  top: 0;
 }
 .app .title {
   position: absolute;

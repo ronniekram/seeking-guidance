@@ -1,8 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import DrawForm from './DrawForm';
-import Spinner from '../layout/Spinner';
 
 const Draws = () => {
   const {draws} = useSelector(state => state.draws);
@@ -21,7 +19,7 @@ const Draws = () => {
 
   const renderLoading = () => {
     if (!draws) {
-      return <Spinner />;
+      return null;
     } else {
       renderDraws();
     };

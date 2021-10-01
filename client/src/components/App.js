@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-do
 import Draws from './draws/Draws';
 import Draw from './draws/Draw';
 import DrawForm from './draws/DrawForm';
-import Icons from './layout/Icons';
 
 import { getCards } from '../redux/actions/card';
 import { getDraws } from '../redux/actions/draw';
@@ -22,11 +21,7 @@ const App = () => {
   
   return (
     <div className={styles.app}>
-      <div className={styles.icons}>
-        <Icons />
-      </div>
       <Router>
-        {/* <NavLink to="/draws">All Draws</NavLink> */}
         <Switch>
           <Route exact path="/" component={DrawForm} />
           <Route exact path="/draws" component={Draws} />
