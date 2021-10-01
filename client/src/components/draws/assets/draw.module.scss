@@ -18,20 +18,19 @@
     letter-spacing: -.5px;
     word-spacing: 1.5px;
 
-    -webkit-animation: focus-in-contract 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.25s both;
-    animation: focus-in-contract 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.25s both;
+    -webkit-animation: text-focus-in 1.25s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.1s both;
+    animation: text-focus-in 1.25s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.1s both;
   }
 }
 
 
 /**
  * ----------------------------------------
- * animation focus-in-contract
+ * animation text-focus-in
  * ----------------------------------------
  */
- @-webkit-keyframes focus-in-contract {
+ @-webkit-keyframes text-focus-in {
   0% {
-    letter-spacing: 1em;
     -webkit-filter: blur(12px);
             filter: blur(12px);
     opacity: 0;
@@ -42,9 +41,8 @@
     opacity: 1;
   }
 }
-@keyframes focus-in-contract {
+@keyframes text-focus-in {
   0% {
-    letter-spacing: 1em;
     -webkit-filter: blur(12px);
             filter: blur(12px);
     opacity: 0;

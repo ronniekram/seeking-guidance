@@ -11,14 +11,14 @@
 }
 .container .header h1 {
   margin: 0;
-  line-height: auto;
+  line-height: 0.75;
   letter-spacing: -3px;
-  font-size: 3.25rem;
+  font-size: 3.15rem;
   text-align: left;
 }
 .container .header h2 {
   margin: 0;
-  line-height: 1rem;
+  line-height: 1.5rem;
   letter-spacing: -1px;
   word-spacing: 0.25rem;
   font-size: 1.5rem;
@@ -43,7 +43,7 @@
 }
 .container .text .sheath {
   margin: 0;
-  padding: 0.5rem 0;
+  padding: 0.25rem 0;
   display: flex;
   justify-content: center;
 }
