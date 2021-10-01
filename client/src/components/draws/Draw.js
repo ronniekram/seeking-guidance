@@ -13,11 +13,15 @@ const Draw = () => {
     if (currentDraw) {
       return (
         <div className={styles.draw}>
-          {/* <h1>{currentDraw.question}</h1>
-          <h3>{currentDraw.created_date}</h3> */}
+
+          <div className={styles.question}>
+            {currentDraw.question}
+          </div>
+
           <div>
             <Cards cards={currentDraw.cards} />
           </div>
+          
         </div>
       );
     } else {
