@@ -13,7 +13,7 @@
       margin: 0;
       line-height: auto;
       letter-spacing: -3px;
-      font-size: 4rem;
+      font-size: 3.5rem;
       text-align: left;
     }
 
@@ -21,6 +21,7 @@
       margin: 0;
       line-height: 1rem;
       letter-spacing: -1px;
+      word-spacing: .25rem;
       font-size: 1.5rem;
       color: $accent;
       text-align: right;
@@ -32,17 +33,17 @@
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem 2.5rem;
+    padding: 2rem;
 
     .summary {
-      // padding: 3rem;
+      // padding: .25rem;
       text-align: justify;
   
       p {
         font-family: $primaryFont;
-        line-height: 19px;
+        line-height: 18px;
         letter-spacing: -.75px;
-        font-size: 15px;
+        font-size: 14px;
       }
     }
 
@@ -51,14 +52,17 @@
       display: flex;
       justify-content: center;
       .sword {
-        width: 60%;
+        width: 70%;
         height: auto;
       }
     }
   
     .directions {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-around;
       h4 {
-        line-height: 19px;
+        line-height: 5px;
         letter-spacing: -.5px;
         font-size: 1rem;
         font-weight: 700;
@@ -67,8 +71,9 @@
       }
   
       p {
+        padding: 0;
         line-height: 15px;
-        letter-spacing: -.75px;
+        letter-spacing: -.5px;
         font-size: 14px;
       }
   

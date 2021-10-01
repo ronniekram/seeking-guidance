@@ -12,13 +12,14 @@
   margin: 0;
   line-height: auto;
   letter-spacing: -3px;
-  font-size: 4rem;
+  font-size: 3.5rem;
   text-align: left;
 }
 .container .header h2 {
   margin: 0;
   line-height: 1rem;
   letter-spacing: -1px;
+  word-spacing: 0.25rem;
   font-size: 1.5rem;
   color: #D93208;
   text-align: right;
@@ -28,16 +29,16 @@
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 2.5rem;
+  padding: 2rem;
 }
 .container .text .summary {
   text-align: justify;
 }
 .container .text .summary p {
   font-family: "Inter";
-  line-height: 19px;
+  line-height: 18px;
   letter-spacing: -0.75px;
-  font-size: 15px;
+  font-size: 14px;
 }
 .container .text .sheath {
   margin: 0;
@@ -45,18 +46,24 @@
   justify-content: center;
 }
 .container .text .sheath .sword {
-  width: 60%;
+  width: 70%;
   height: auto;
 }
+.container .text .directions {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
 .container .text .directions h4 {
-  line-height: 19px;
+  line-height: 5px;
   letter-spacing: -0.5px;
   font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 .container .text .directions p {
+  padding: 0;
   line-height: 15px;
-  letter-spacing: -0.75px;
+  letter-spacing: -0.5px;
   font-size: 14px;
 }

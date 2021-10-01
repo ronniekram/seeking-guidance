@@ -1,22 +1,23 @@
 @import '../styles//variables.scss';
 
 .app {
+  margin: 0;
   display: flex;
   justify-content: center;
-  min-height: 100vh;
-  height: 100vh;
+  max-height: 93vh;
+  height: 100%;
   position: relative;
 
   .title {
-    position: fixed;
-    bottom: 2.5rem;
+    position: absolute;
+    bottom: 0;
     h1 {    
       margin: 0;
     
       line-height: 1rem;
       letter-spacing: -3px;
       font-family: $secondaryFont;
-      font-size: 6rem;
+      font-size: 5rem;
     
       text-transform: uppercase;
     }
