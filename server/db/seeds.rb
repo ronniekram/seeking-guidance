@@ -17,10 +17,10 @@ cards_array.each do |card|
     image: card["image"],
     upright: card["meaning_up"],
     reversed: card["meaning_rev"],
-    rightSide: [true, false].sample
     )
  end
 
 5.times do 
-  Draw.create(question: Faker::Quote.jack_handey)
+  ids = [rand(1..26), rand(53..78), rand(27..52)]
+  Draw.create(question: Faker::Quote.jack_handey, card_ids: ids)
 end

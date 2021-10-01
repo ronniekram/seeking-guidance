@@ -7,7 +7,6 @@ class CreateCards < ActiveRecord::Migration[6.1]
       t.string :image
       t.string :upright
       t.string :reversed
-      t.boolean :rightSide
       t.timestamps
     end
   end

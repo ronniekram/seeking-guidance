@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 2021_09_29_132356) do
     t.string "image"
     t.string "upright"
     t.string "reversed"
-    t.boolean "rightSide"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
