@@ -1,45 +1,32 @@
-import React from 'react';
-import sword from '../../assets/svgs/sword.svg';
+import React, { useEffect } from 'react';
 import swordUp from '../../assets/svgs/swordUp.svg';
 import styles from './assets/card.module.css';
 
-const Card = ({ card }) => {
-  
+const Card = ({ card, setInProp }) => {
+
+  useEffect(() => {
+    setTimeout(() => {
+      setInProp(false);
+    }, 1000)
+  });
+
   const renderCard = () => {
     if (card) {
       const { name, cardType, summary, upright, reversed} = card;
       return (
         <div className={styles.container}>
           <div className={styles.header}>
-            {/* Header */}
             <h1>{name}</h1>
             <h2>{cardType} Arcana</h2>
           </div>
 
           <div className={styles.text}>
             <div className={styles.summary}>
-              {/* Card Summary */}
               <p>{summary}</p>
             </div>
 
-            {/* <div className={styles.sheath}>
-              Sword Image
-              <img src={sword} alt="It's a sword." className={styles.sword} />
-            </div>
 
-            <div className={styles.directions}>
-              Directions
-              <div>
-                <h4>Upright:</h4>
-                <p>{upright}</p>
-              </div>
-
-              <div>
-                <h4>Reversed:</h4>
-                <p>{reversed}</p>
-              </div> */}
-
-              <div className={styles.directionContainer}>
+            <div className={styles.directionContainer}>
 
               <div className={styles.sheath}>
                   <img 
@@ -63,7 +50,7 @@ const Card = ({ card }) => {
                 </div>
 
               </div>
-          </div>
+           </div>
         </div>
       )
     } else {
@@ -72,9 +59,9 @@ const Card = ({ card }) => {
   };
 
   return (
-    <section>
+    <div>
       {renderCard()}
-    </section>
+    </div>
   );
 };
 
