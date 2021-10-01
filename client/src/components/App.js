@@ -21,7 +21,7 @@ const App = () => {
       <Router>
         {/* <NavLink to="/draws">All Draws</NavLink> */}
         <Switch>
-          <Route exact path="/" component={Draws} />
+          <Route exact path="/" component={DrawForm} />
           <Route exact path="/draws" component={Draws} />
           <Route path="/draws/:id" component={Draw} />
 

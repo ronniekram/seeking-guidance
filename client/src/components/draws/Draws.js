@@ -37,7 +37,7 @@ const Draws = () => {
       </div> */}
 
       <div>
-        <DrawForm />
+        {/* <DrawForm /> */}
       </div>
     </>
   );
