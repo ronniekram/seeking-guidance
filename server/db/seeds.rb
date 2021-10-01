@@ -20,7 +20,9 @@ cards_array.each do |card|
     )
  end
 
-5.times do 
-  ids = [rand(1..26), rand(53..78), rand(27..52)]
-  Draw.create(question: Faker::Quote.jack_handey, card_ids: ids)
-end
+
+Draw.create(question: "DOES OBSERVATION SERVE AS A FRIEND?", card_ids: [rand(1..26), rand(53..78), rand(27..52)])
+Draw.create(question: "IF MEMORY IS OPEN-SOURCE DOES IT BELONG TO YOU?", card_ids: [rand(1..26), rand(53..78), rand(27..52)])
+Draw.create(question: "DID TIME HAVE A DEVICE ENHANCING OUR SENSES?", card_ids: [rand(1..26), rand(53..78), rand(27..52)])
+Draw.create(question: "WHAT IF WE COULD FIND RELIEF IN OTHERS’ EXPERIENCES?", card_ids: [rand(1..26), rand(53..78), rand(27..52)])
+Draw.create(question: "HOW DO YOU HAVE TO APPEAR HUMAN TO THE REST OF THE STORY?", card_ids: [rand(1..26), rand(53..78), rand(27..52)])
