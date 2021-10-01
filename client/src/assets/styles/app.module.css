@@ -7,6 +7,11 @@
   height: 100%;
   position: relative;
 }
+.app .icons {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
 .app .title {
   position: absolute;
   bottom: 0;

@@ -8,6 +8,12 @@
   height: 100%;
   position: relative;
 
+  .icons {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
   .title {
     position: absolute;
     bottom: 0;

@@ -1,11 +1,15 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
+
 import Draws from './draws/Draws';
 import Draw from './draws/Draw';
 import DrawForm from './draws/DrawForm';
+import Icons from './layout/Icons';
+
 import { getCards } from '../redux/actions/card';
 import { getDraws } from '../redux/actions/draw';
+
 import styles from '../assets/styles/app.module.css';
 
 const App = () => {
@@ -18,6 +22,9 @@ const App = () => {
   
   return (
     <div className={styles.app}>
+      <div className={styles.icons}>
+        <Icons />
+      </div>
       <Router>
         {/* <NavLink to="/draws">All Draws</NavLink> */}
         <Switch>
@@ -27,9 +34,11 @@ const App = () => {
 
         </Switch>
       </Router>
+
       <div className={styles.title}>
         <h1>Seeking Guidance</h1>
       </div>
+
     </div>
   );
 };
