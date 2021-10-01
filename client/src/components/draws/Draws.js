@@ -29,12 +29,12 @@ const Draws = () => {
 
   return (
     <>
-      <div>
+      {/* <div>
         <h1>Draws List</h1>
         <div>
           {renderDraws()}
         </div>
-      </div>
+      </div> */}
 
       <div>
         <DrawForm />

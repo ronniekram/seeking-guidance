@@ -1,42 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useFormik } from 'formik';
 import Input from '../forms/Input';
 import Button from '../forms/Input';
 import { postDraw } from '../../redux/actions/draw';
+import styles from './assets/drawform.module.css';
 
 const DrawForm = () => {
-  // add num column to draw on backend to allow choice of num of cards
-
   const dispatch = useDispatch();
+  const [question, setQuestion] = useState('');
 
-  // formik values returns an object -- not iterable
-  const formik = useFormik({
-    initialValues: {
-      question: '',
-    },
-    onSubmit: (values, {resetForm}) => {
-      dispatch(postDraw(values));
-      resetForm({ values: { question: '' } });
-    }
-  });
+  const handleSubmit = () => {
+    dispatch(postDraw({ question }));
+    setQuestion('');
+  };
 
   return (
-    <div>
-      <form onSubmit={formik.handleSubmit}>
-        
+    <div className={styles.container}>
+
+      <div className={styles.illuminate}>
+        Illuminate your path...
+      </div>
+
+      <form onSubmit={handleSubmit}>
+
         <Input
           id="question"
           name="question"
           type="text"
-          value={formik.values.question}
-          handleChange={formik.handleChange}
+          value={question}
+          handleChange={(e) => setQuestion(e.target.value)}
         />
 
-        <Button type="submit" text="Draw" />
+        <Button type="submit" text="Ask" />
       </form>
     </div>
   );
 };
 
 export default DrawForm;
+
+
+// <Input
+// id="question"
+// name="question"
+// type="text"
+// value={formik.values.question}
+// handleChange={formik.handleChange}
+// />
+// <Button type="submit" text="Ask" />

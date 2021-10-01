@@ -1,0 +1,35 @@
+@import '../../../assets/styles/variables.scss';
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+
+  .illuminate {
+    padding: 0;
+    margin: 1rem;
+    width: 18ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid;
+    font-family: $primaryFont;
+    font-size: .95em;
+    font-weight: 300;
+    letter-spacing: .5px;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}

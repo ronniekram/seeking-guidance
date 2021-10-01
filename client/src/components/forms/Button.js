@@ -1,5 +1,5 @@
 import React from 'react';
-import './button.module.css';
+import styles from './button.module.css';
 
 const Button = ({ type, handleClick, text }) => {
 
@@ -9,10 +9,11 @@ const Button = ({ type, handleClick, text }) => {
 
   return (
     <button
+      className={styles.button}
       type={type}
       onClick={handleClick}
     >
-      {text}
+      Ask
     </button>
   );
 }

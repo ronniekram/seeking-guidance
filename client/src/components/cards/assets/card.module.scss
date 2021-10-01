@@ -43,42 +43,57 @@
         font-family: $primaryFont;
         line-height: 18px;
         letter-spacing: -.75px;
-        font-size: 14px;
+        font-size: 15px;
       }
     }
 
-    .sheath {
-      margin: 0;
-      padding: .25rem 0;
+    .directionContainer {
       display: flex;
-      justify-content: center;
-      .sword {
-        width: 70%;
+      flex-flow: row nowrap;
+      align-content: center;
+      justify-content: space-between;
+      width: 100%;
+
+      .directions {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        margin-left: .5rem;
+        max-width: 80%;
+
+        h4 {
+          line-height: 5px;
+          letter-spacing: -.5px;
+          font-size: 1rem;
+          font-weight: 700;
+  
+          text-transform: uppercase;
+        }
+    
+        p {
+          margin-top: -.5rem;
+          padding: 0;
+          line-height: 15px;
+          letter-spacing: -.5px;
+          font-size: 14px;
+        }
+    
+      }
+      
+      .sheath {
+        max-width: 15%;
+        width: 15%;
         height: auto;
-      }
-    }
-  
-    .directions {
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: space-around;
-      h4 {
-        line-height: 5px;
-        letter-spacing: -.5px;
-        font-size: 1rem;
-        font-weight: 700;
+        margin: 0;
+        padding: .25rem;
+        display: flex;
+        justify-content: center;
 
-        text-transform: uppercase;
+        .sword {
+          height: auto;
+        }
       }
-  
-      p {
-        margin-top: -.5rem;
-        padding: 0;
-        line-height: 15px;
-        letter-spacing: -.5px;
-        font-size: 14px;
-      }
-  
     }
+  
   }
 }

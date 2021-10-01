@@ -1,5 +1,5 @@
 import React from 'react';
-import './input.module.css';
+import styles from './input.module.css';
 
 const Input = ({ id, name, type, value, handleChange }) => {
   return (
@@ -8,7 +8,8 @@ const Input = ({ id, name, type, value, handleChange }) => {
       name={name}
       type={type}
       value={value}
-      onChange={handleChange} 
+      onChange={handleChange}
+      className={styles.input} 
     />
   );
 }

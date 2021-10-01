@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
 import Draws from './draws/Draws';
 import Draw from './draws/Draw';
+import DrawForm from './draws/DrawForm';
 import { getCards } from '../redux/actions/card';
 import { getDraws } from '../redux/actions/draw';
 import styles from '../assets/styles/app.module.css';
@@ -20,8 +21,8 @@ const App = () => {
       <Router>
         {/* <NavLink to="/draws">All Draws</NavLink> */}
         <Switch>
+          <Route exact path="/" component={Draws} />
           <Route exact path="/draws" component={Draws} />
-
           <Route path="/draws/:id" component={Draw} />
 
         </Switch>

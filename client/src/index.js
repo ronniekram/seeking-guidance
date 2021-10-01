@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+// import * as PIXI from 'pixi.js'
 import store from './redux/store';
 import App from './components/App';
 import'./assets/styles/index.css';

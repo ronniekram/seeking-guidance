@@ -3,18 +3,19 @@
 .draw {
   max-height: 100vh;
   height: 100vh;
-  margin-bottom: -1rem;
+  margin-top: -1.5rem;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
 
   .question {
+    color: #3D3D3D;
     line-height: 0;
-    padding: 0;
+    padding: .5rem;
     margin: 0;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: -.5px;
     word-spacing: 1.5px;
 
