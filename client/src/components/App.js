@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Nav from './layout/Nav';
 import Draws from './draws/Draws';
@@ -14,6 +14,7 @@ import styles from '../assets/styles/app.module.css';
 
 const App = () => {
   const dispatch = useDispatch();
+  const modal = useRef(null);
 
   useEffect(() => {
     dispatch(getCards());
@@ -21,26 +22,26 @@ const App = () => {
   });
   
   return (
-    <div className={styles.app}>
-      <Router>
+    <>
+      <div className={styles.app}>
+        <Router>
 
-        <div className={styles.burger}>
-          <Nav />
+          <div className={styles.burger}>
+            <button onClick={() => modal.current.open()}>menu</button>
+          </div>
+
+          <Switch>
+            <Route exact path="/" component={DrawForm} />
+            <Route exact path="/draws" component={Draws} />
+            <Route path="/draws/:id" component={Draw} />
+          </Switch>
+        </Router>
+
+        <div className={styles.title}>
+          <h1>Seeking Guidance</h1>
         </div>
-        
-        <Switch>
-          <Route exact path="/" component={DrawForm} />
-          <Route exact path="/draws" component={Draws} />
-          <Route path="/draws/:id" component={Draw} />
-
-        </Switch>
-      </Router>
-
-      <div className={styles.title}>
-        <h1>Seeking Guidance</h1>
       </div>
-
-    </div>
+    </>
   );
 };
 

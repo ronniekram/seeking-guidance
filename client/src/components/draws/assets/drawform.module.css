@@ -9,7 +9,7 @@
 .container form input {
   margin: 0.25rem;
   padding: 0.25rem 0.25rem;
-  background: #F3F3F3;
+  background: #FFFDEB;
   font-family: "Barlow";
   border: 1px solid #282828;
   border-radius: 4px;
@@ -20,7 +20,7 @@
 .container form button {
   margin: 0.25rem;
   padding: 0.25rem 1rem;
-  background: #F3F3F3;
+  background: #FFFDEB;
   font-family: "Barlow";
   border: 1px solid #282828;
   border-radius: 4px;

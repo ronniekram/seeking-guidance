@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import Burger from 'react-css-burger';
+import React, { useRef } from 'react';
+import NavModal from './NavModal';
 
 const Nav = () => {
-  const [active, setActive] = useState(false);
+  const modal = useRef(null);
 
   return (
-    <div>
-      <Burger
-        onClick={() => setActive(!active)}
-        active={active}
-        burger="minus"
-        color="#D93208"
-        scale={.75}
-      />
-    </div>
+    <>
+      <div>
+        <button onClick={() => modal.current.open()}>menu</button>
+      </div>
+
+      <NavModal ref={modal}>
+        hi hello
+      </NavModal>
+    </>
   );
-};
+}
 
 export default Nav;
