@@ -1,4 +1,7 @@
 import React, { useRef, useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import NavModal from './NavModal';
 import './assets/hamburgers.css';
 
@@ -19,12 +22,16 @@ const Nav = () => {
       <button className={burgerClasses} type="button" onClick={handleClick}>
         <span className="hamburger-box">
           <span className="hamburger-inner"></span>
-        </span>
+        </span> 
       </button>
+
+      <NavLink to="/">
+        <FontAwesomeIcon icon={faPlus} />
+      </NavLink>
       </div>
 
       <NavModal ref={modal} setIsActive={setIsActive}>
-        hi hello
+
       </NavModal>
     </>
   );

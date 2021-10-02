@@ -33,7 +33,7 @@
 }
 
 .hamburger-box {
-  width: 40px;
+  width: 2rem;
   height: 24px;
   display: inline-block;
   position: relative;
@@ -45,7 +45,7 @@
   margin-top: -2px;
 }
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-  width: 40px;
+  width: 2rem;
   height: 4px;
   background-color: #000;
   border-radius: 4px;
