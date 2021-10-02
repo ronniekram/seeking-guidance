@@ -8,21 +8,26 @@
 }
 .container form input {
   margin: 0.25rem;
-  padding: 0.25rem 0.75rem;
+  padding: 0.25rem 0.25rem;
+  background: #F3F3F3;
   font-family: "Barlow";
   border: 1px solid #282828;
   border-radius: 4px;
 }
+.container form input:focus, .container form button:focus {
+  outline: 2px solid #B6CCE2;
+}
 .container form button {
   margin: 0.25rem;
-  padding: 0.25rem 0.75rem;
+  padding: 0.25rem 1rem;
+  background: #F3F3F3;
   font-family: "Barlow";
   border: 1px solid #282828;
   border-radius: 4px;
 }
 .container .illuminate {
   padding: 0;
-  margin: 1rem;
+  margin: 0.25rem 1rem;
   width: 18ch;
   -webkit-animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
           animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;

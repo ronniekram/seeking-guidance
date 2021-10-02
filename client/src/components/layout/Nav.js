@@ -11,7 +11,7 @@ const Nav = () => {
         active={active}
         burger="minus"
         color="#D93208"
-        scale={1.25}
+        scale={.75}
       />
     </div>
   );

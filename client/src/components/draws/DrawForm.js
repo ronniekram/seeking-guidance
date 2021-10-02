@@ -11,8 +11,12 @@ const DrawForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(postDraw({ question }, history));
-    setQuestion('');
+    if (question !== '') {
+      dispatch(postDraw({ question }, history));
+      setQuestion('');
+    } else {
+      setQuestion('You have to ask something...')
+    }
   };
 
   return (

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
 
+import Nav from './layout/Nav';
 import Draws from './draws/Draws';
 import Draw from './draws/Draw';
 import DrawForm from './draws/DrawForm';
@@ -22,6 +23,11 @@ const App = () => {
   return (
     <div className={styles.app}>
       <Router>
+
+        <div className={styles.burger}>
+          <Nav />
+        </div>
+        
         <Switch>
           <Route exact path="/" component={DrawForm} />
           <Route exact path="/draws" component={Draws} />
