@@ -1,14 +1,15 @@
 import React, { useEffect, useImperativeHandle, useState, forwardRef, useCallback } from 'react';
 import { createPortal } from 'react-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import './assets/modal.css'
+import cx from 'classnames';
+import styles from '../../assets/styles/layout/modal.module.scss';
 
 const modalElement = document.getElementById('modal');
 
 const Modal = ({ children, fade = false, defaultOpened = false, setIsActive }, ref) => {
 
   const [isOpen, setIsOpen] = useState(defaultOpened);
+
+  const withFade = fade ? cx(styles.modal, styles.modal_fade) : styles.modal;
 
   const close = useCallback(() => {
     setIsOpen(false);
@@ -24,6 +25,8 @@ const Modal = ({ children, fade = false, defaultOpened = false, setIsActive }, r
     if (event.keyCode === 27) close()
   }, [close]);
 
+
+
   useEffect(() => {
     if (isOpen) document.addEventListener('keydown', handleEscape, false);
     return () => {
@@ -33,12 +36,9 @@ const Modal = ({ children, fade = false, defaultOpened = false, setIsActive }, r
 
   return createPortal(
     isOpen ? (
-      <div className={`modal ${fade ? 'modal-fade' : ''}`}>
-        <div className="modal-overlay" onClick={close} />
-        {/* <span role="button" className="modal-close" aria-label="close" onClick={close}>
-          <FontAwesomeIcon icon={faTimes} />
-        </span> */}
-        <div className="modal-body">{children}</div>
+      <div className={withFade}>
+        <div className={styles.modal_overlay} onClick={close} />
+        <div className={styles.modal_body}>{children}</div>
       </div>
     ) : null,
     modalElement
@@ -46,3 +46,9 @@ const Modal = ({ children, fade = false, defaultOpened = false, setIsActive }, r
 };
 
 export default forwardRef(Modal);
+
+
+{/* <div className={`modal ${fade ? 'modal-fade' : ''}`}>
+<div className="modal-overlay" onClick={close} />
+<div className="modal-body">{children}</div>
+</div> */}

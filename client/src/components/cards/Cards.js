@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { CSSTransition} from 'react-transition-group';
 import Card from './Card';
-import styles from './assets/cards.module.css';
-import './assets/transition.css';
+import fadeTransition from '../../assets/styles/cards/fade.module.scss';
+import styles from '../../assets/styles/cards/cards.module.scss';
 
 const Cards = ({ cards }) => {
   const [card, setCard] = useState(cards[0]);
@@ -33,11 +33,14 @@ const Cards = ({ cards }) => {
   return (
     <article className={styles.container}>
       <section className={styles.cardInfo}>
-        {/* <TransitionGroup> */}
-          <CSSTransition in={inProp} timeout={200} classNames="card-transition">
-            <Card card={card} setInProp={setInProp} />
+          <CSSTransition 
+            in={inProp} 
+            timeout={250} 
+            classNames={fadeTransition}
+            onEntered={() => setInProp(false)}
+          >
+            <Card card={card} />
           </CSSTransition>
-        {/* </TransitionGroup> */}
       </section>
 
       <section className={styles.cards}>

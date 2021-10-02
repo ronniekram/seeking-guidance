@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import './globals';
 
 .app {
   margin: 0;
@@ -17,14 +17,13 @@
   .title {
     position: absolute;
     bottom: 0;
+
     h1 {    
       margin: 0;
-    
       line-height: 1rem;
       letter-spacing: -3px;
       font-family: $secondaryFont;
       font-size: 5rem;
-    
       text-transform: uppercase;
     }
   }

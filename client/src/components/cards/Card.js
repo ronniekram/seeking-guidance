@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react';
-import swordUp from '../../assets/svgs/swordUp.svg';
-import styles from './assets/card.module.css';
+import React from 'react';
+import sword from '../../assets/svg/sword.svg';
+import styles from '../../assets/styles/cards/card.module.scss';
 
-const Card = ({ card, setInProp }) => {
+const Card = ({ card }) => {
 
-  useEffect(() => {
-    setTimeout(() => {
-      setInProp(false);
-    }, 1200)
-  });
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setInProp(false);
+  //   }, 1200)
+  // });
 
   const renderCard = () => {
     if (card) {
@@ -30,7 +30,7 @@ const Card = ({ card, setInProp }) => {
 
               <div className={styles.sheath}>
                   <img 
-                    src={swordUp} 
+                    src={sword} 
                     alt="It's a sword." 
                     className={styles.sword} 
                   />

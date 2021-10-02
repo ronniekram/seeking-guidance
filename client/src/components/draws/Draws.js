@@ -1,27 +1,12 @@
 import React from 'react';
-// import { useSelector } from 'react-redux';
-// import { NavLink } from 'react-router-dom';
+import styles from '../../assets/styles/draws/draws.module.scss';
 
 const Draws = () => {
-  // const {draws} = useSelector(state => state.draws);
-
-  // const renderDraws = () => {
-  //   return (
-  //     draws.map((draw) => {
-  //       return (
-  //         <p key={draw.id}>
-  //           <NavLink to={`/draws/${draw.id}`}>{draw.question} {draw.created_date}</NavLink>
-  //         </p>
-  //       );
-  //     })
-  //   );
-  // };
-
   return (
-    <>
-
-    </>
+    <div>
+      
+    </div>
   );
-};
+}
 
 export default Draws;

@@ -1,15 +1,12 @@
 import React, { useRef, useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import NavModal from './NavModal';
-import './assets/hamburgers.css';
+import Hamburger from 'react-hamburgers';
+import Modal from './Modal';
+import styles from '../../assets/styles/layout/nav.module.scss';
 
 const Nav = () => {
   const modal = useRef(null);
   const [isActive, setIsActive] = useState(false);
 
-  const burgerClasses = isActive ? "hamburger hamburger--minus is-active" : "hamburger hamburger--minus";
 
   const handleClick = () => {
     modal.current.open();
@@ -19,22 +16,18 @@ const Nav = () => {
   return (
     <>
       <div>
-      <button className={burgerClasses} type="button" onClick={handleClick}>
-        <span className="hamburger-box">
-          <span className="hamburger-inner"></span>
-        </span> 
-      </button>
-
-      <NavLink to="/">
-        <FontAwesomeIcon icon={faPlus} />
-      </NavLink>
+        <Hamburger 
+          active={isActive}
+          type="minus"
+          onClick={handleClick}
+        />
       </div>
 
-      <NavModal ref={modal} setIsActive={setIsActive}>
-
-      </NavModal>
+      <Modal ref={modal} setIsActive={setIsActive}>
+        hi hello hey hey hey
+      </Modal>
     </>
   );
-}
+};
 
 export default Nav;

@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Cards from '../cards/Cards';
-import styles from './assets/draw.module.css';
+import styles from '../../assets/styles/draws/draw.module.scss';
 
 const Draw = () => {
   const { draws } = useSelector(state => state.draws);

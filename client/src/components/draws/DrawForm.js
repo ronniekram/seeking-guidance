@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { postDraw } from '../../redux/actions/draw';
-import styles from './assets/drawform.module.css';
+import styles from '../../assets/styles/draws/form.module.scss';
 
 const DrawForm = () => {
   const dispatch = useDispatch();

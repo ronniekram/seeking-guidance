@@ -10,7 +10,7 @@ import DrawForm from './draws/DrawForm';
 import { getCards } from '../redux/actions/card';
 import { getDraws } from '../redux/actions/draw';
 
-import styles from '../assets/styles/app.module.css';
+import styles from '../assets/styles/app.module.scss';
 
 const App = () => {
   const dispatch = useDispatch();
