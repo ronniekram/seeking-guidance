@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -14,7 +14,6 @@ import styles from '../assets/styles/app.module.css';
 
 const App = () => {
   const dispatch = useDispatch();
-  const modal = useRef(null);
 
   useEffect(() => {
     dispatch(getCards());
@@ -27,7 +26,7 @@ const App = () => {
         <Router>
 
           <div className={styles.burger}>
-            <button onClick={() => modal.current.open()}>menu</button>
+            <Nav />
           </div>
 
           <Switch>

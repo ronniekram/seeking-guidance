@@ -4,10 +4,13 @@ import './assets/modal.css'
 
 const modalElement = document.getElementById('modal');
 
-export function Modal({ children, fade = false, defaultOpened = false }, ref) {
+export function Modal({ children, fade = false, defaultOpened = false, setIsActive }, ref) {
   const [isOpen, setIsOpen] = useState(defaultOpened)
 
-  const close = useCallback(() => setIsOpen(false), [])
+  const close = useCallback(() => {
+    setIsOpen(false);
+    setIsActive(false);
+  }, [])
 
   useImperativeHandle(ref, () => ({
     open: () => setIsOpen(true),
