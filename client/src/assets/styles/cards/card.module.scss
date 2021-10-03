@@ -14,8 +14,12 @@
       margin: 0;
       line-height: .75;
       letter-spacing: -3px;
-      font-size: 3.15rem;
+      font-size: 2.5rem;
       text-align: left;
+
+      @include lg {
+        font-size: 3.15rem;
+      }
     }
 
     h2 {
@@ -36,14 +40,22 @@
     align-items: center;
 
     .summary {
-      margin-top: 1rem;
+      margin-top: .5rem;
       text-align: justify;
+
+      @include lg {
+        margin-top: 1rem;
+      }
   
       p {
         font-family: $primaryFont;
-        line-height: 18px;
+        line-height: 16px;
         letter-spacing: -.75px;
         font-size: 15px;
+
+        @include lg {
+          line-height: 18px;
+        }
       }
     }
 

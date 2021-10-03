@@ -4,27 +4,40 @@
   margin: 0;
   display: flex;
   justify-content: center;
-  max-height: 93vh;
-  height: 100%;
   position: relative;
 
-  .burger {
-    position: absolute;
-    left: 0;
-    top: 0;
+  @include lg {
+    max-height: 93vh;
+    height: 100%;
   }
 
   .title {
     position: absolute;
-    bottom: 0;
 
-    h1 {    
-      margin: 0;
+    // media queries
+    @include lg {
+      bottom: 0;
+    }
+    // media queries
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      font-family: $secondaryFont;
       line-height: 1rem;
       letter-spacing: -3px;
-      font-family: $secondaryFont;
-      font-size: 5rem;
       text-transform: uppercase;
+
+      // media queries
+      @include xs {
+        font-size: 2rem;
+      }
+      @include lg {
+        margin: 0;
+        line-height: 1rem;
+        font-size: 5rem;
+      }
+      // media queries
     }
   }
 }

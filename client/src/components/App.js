@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Nav from './layout/Nav';
+// import Nav from './layout/Nav';
 import Draws from './draws/Draws';
 import Draw from './draws/Draw';
 import DrawForm from './draws/DrawForm';
@@ -25,9 +25,9 @@ const App = () => {
       <div className={styles.app}>
         <Router>
 
-          <div className={styles.burger}>
+          {/* <div className={styles.burger}>
             <Nav />
-          </div>
+          </div> */}
 
           <Switch>
             <Route exact path="/" component={DrawForm} />
