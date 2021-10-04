@@ -14,7 +14,7 @@ const Landing = () => {
       </p>
 
       <p className={styles.links}>
-        <NavLink to="/draws/new">Illuminate your path</NavLink> or <NavLink to="/draws">see paths from the past...</NavLink>
+        <NavLink to="/draws/new">Illuminate your path...</NavLink>
       </p>
 
     </article>

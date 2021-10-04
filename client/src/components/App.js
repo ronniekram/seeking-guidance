@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-// import Nav from './layout/Nav';
+import Nav from './layout/Nav';
 import Landing from './layout/Landing';
 import Draws from './draws/Draws';
 import Draw from './draws/Draw';
@@ -23,25 +23,27 @@ const App = () => {
   
   return (
     <>
-      <div className={styles.app}>
-        <Router>
+      <Router>
 
-          {/* <div className={styles.burger}>
-            <Nav />
-          </div> */}
+        <div>
+          <Nav />
+        </div>
 
+        <div className={styles.app}>
           <Switch>
-          <Route exact path="/" component={Landing} />
+            <Route exact path="/" component={Landing} />
             <Route exact path="/draws/new" component={DrawForm} />
             <Route exact path="/draws" component={Draws} />
             <Route path="/draws/:id" component={Draw} />
           </Switch>
-        </Router>
 
-        <div className={styles.title}>
-          <h1>Seeking Guidance</h1>
+          <div className={styles.title}>
+            <h1>Seeking Guidance</h1>
+          </div>
+
         </div>
-      </div>
+
+      </Router>
     </>
   );
 };
