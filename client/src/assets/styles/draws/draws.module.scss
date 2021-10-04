@@ -1,2 +1,22 @@
 @import '../globals';
 
+.container {
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    padding: 1rem;
+    p {
+      text-align: center;
+    }
+
+    li {
+      list-style: none;
+      text-transform: lowercase;
+      padding: .25rem 0;
+    }
+  }
+}
