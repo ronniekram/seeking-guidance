@@ -14,11 +14,10 @@ const Draw = () => {
       return (
         <div className={styles.draw}>
 
-          <div className={styles.question}>
-            {currentDraw.question}
-          </div>
-
           <div>
+            <div className={styles.question}>
+              {currentDraw.question}
+            </div>
             <Cards cards={currentDraw.cards} />
           </div>
           

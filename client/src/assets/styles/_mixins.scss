@@ -7,6 +7,12 @@
   }
 }
 
+@mixin s-height {
+  @media only screen and (max-height: #{$screen-height-sm}) {
+    @content;
+  }
+}
+
 // Small devices
 @mixin sm {
   @media only screen and (min-width: #{$screen-sm-min}) {
