@@ -7,8 +7,15 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-content: center;
+  
   @include lg {
     width: 25%;
+  }
+
+  img {
+    align-self: center;
+    // width: 75%;
+    width: 40%;
   }
 
   .links {
