@@ -4,12 +4,6 @@ import styles from '../../assets/styles/cards/card.module.scss';
 
 const Card = ({ card }) => {
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setInProp(false);
-  //   }, 1200)
-  // });
-
   const renderCard = () => {
     if (card) {
       const { name, cardType, summary, upright, reversed} = card;
