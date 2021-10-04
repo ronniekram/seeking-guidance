@@ -1,0 +1,32 @@
+@import '../globals';
+
+.container {
+  width: 90%;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  @include lg {
+    width: 25%;
+  }
+
+  .links {
+    text-align: left;
+    font-size: 15px;
+    a {
+      color: $accent;
+      font-weight: 500;
+      text-decoration: none;
+    }
+  }
+
+  p {
+    align-self: center;
+    justify-self: center;
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1rem;
+    word-spacing: -1px;
+  }
+}

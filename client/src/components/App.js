@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // import Nav from './layout/Nav';
+import Landing from './layout/Landing';
 import Draws from './draws/Draws';
 import Draw from './draws/Draw';
 import DrawForm from './draws/DrawForm';
@@ -30,7 +31,8 @@ const App = () => {
           </div> */}
 
           <Switch>
-            <Route exact path="/" component={DrawForm} />
+          <Route exact path="/" component={Landing} />
+            <Route exact path="/draws/new" component={DrawForm} />
             <Route exact path="/draws" component={Draws} />
             <Route path="/draws/:id" component={Draw} />
           </Switch>
