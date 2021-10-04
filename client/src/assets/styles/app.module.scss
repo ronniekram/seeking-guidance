@@ -23,13 +23,13 @@
   }
 
   .title {
-    position: absolute;
+    position: fixed;
     top: 1rem;
     
     // media queries
     @include lg {
       top: unset;
-      bottom: 0;
+      bottom: 2rem;
     }
     // media queries
 
