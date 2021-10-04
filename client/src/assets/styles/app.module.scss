@@ -14,14 +14,21 @@
   .nav {
     position: absolute;
     left: 3rem;
-    padding-left: 1rem;
+    // padding: 2rem;
+    padding: 0 0 0 1rem;
+
+    @include lg {
+      padding: 0 0 0 1rem;
+    }
   }
 
   .title {
     position: absolute;
-
+    top: 1rem;
+    
     // media queries
     @include lg {
+      top: unset;
       bottom: 0;
     }
     // media queries

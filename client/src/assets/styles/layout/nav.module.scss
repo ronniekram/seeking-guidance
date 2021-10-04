@@ -12,8 +12,15 @@
 
   .link {
     padding: 0 .5rem;
-    img {
-      
+
+    &:active {
+      text-transform: lowercase;
+      color: $activeNav;
+    }
+
+    &:hover {
+      font-weight: 600;
+      letter-spacing: 1px;
     }
   }
 }

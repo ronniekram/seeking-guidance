@@ -15,7 +15,7 @@ const Nav = () => {
         HOME
       </NavLink>
 
-      <NavLink to="/draws" className={styles.link}>
+      <NavLink to="/draws" className={styles.link} activeClassName={styles.link}>
         {/* <img src={archive} alt="Archive Icon" />  */}
         PAST
       </NavLink>
