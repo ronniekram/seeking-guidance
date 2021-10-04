@@ -25,6 +25,11 @@ const Nav = () => {
         FUTURE
       </NavLink>
 
+      <NavLink to="/card" className={styles.link}>
+        {/* <img src={plus} alt="Add Icon" />  */}
+        ONECARD
+      </NavLink>
+
     </nav>
   );
 };
