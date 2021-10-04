@@ -10,16 +10,19 @@ const Nav = () => {
   return (
     <nav className={styles.container}>
 
-      <NavLink to="/">
-        <img src={home} alt="Home Icon" />
+      <NavLink to="/" className={styles.link}>
+        {/* <img src={home} alt="Home Icon" />  */}
+        HOME
       </NavLink>
 
-      <NavLink to="/draws">
-        <img src={archive} alt="Archive Icon" />
+      <NavLink to="/draws" className={styles.link}>
+        {/* <img src={archive} alt="Archive Icon" />  */}
+        PAST
       </NavLink>
 
-      <NavLink to="/draws/new">
-        <img src={plus} alt="Add Icon" />
+      <NavLink to="/draws/new" className={styles.link}>
+        {/* <img src={plus} alt="Add Icon" />  */}
+        FUTURE
       </NavLink>
 
     </nav>

@@ -25,11 +25,14 @@ const App = () => {
     <>
       <Router>
 
-        <div>
+        {/* <div className={styles.nav}>
           <Nav />
-        </div>
+        </div> */}
 
         <div className={styles.app}>
+          <div className={styles.nav}>
+            <Nav />
+          </div>
           <Switch>
             <Route exact path="/" component={Landing} />
             <Route exact path="/draws/new" component={DrawForm} />

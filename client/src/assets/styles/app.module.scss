@@ -11,12 +11,18 @@
     height: 100%;
   }
 
+  .nav {
+    position: absolute;
+    left: 3rem;
+    padding-left: 1rem;
+  }
+
   .title {
     position: absolute;
 
     // media queries
     @include lg {
-      bottom: 3rem;
+      bottom: 0;
     }
     // media queries
 
