@@ -5,15 +5,15 @@ $primaryFont: 'Barlow';
 $secondaryFont: 'Playfair Display SC';
 
 // Color Scheme
-$primary: #F2F6FA;
-$secondary: #282828;
-$accent: #D93208;
-$yellow: #FBDB5B;
-$blue: rgb(128, 195, 255);
-$white: #FFFDEB;
+$primary: rgba(240, 245, 249, 1);
+$secondary: rgba(40, 40, 40, 1);
+$accent: rgba(217, 50, 8, 1);
+$yellow: rgba(251, 219, 91, 1);
+$blue: rgba(128, 195, 255, 1);
+$white: rgba(250, 252, 255, 1);
 
-$muted: #3D3D3D;
-$cardBorder: #FFF6D6;
-$focusRing: #B6CCE2;
+$muted: rgba(61, 61, 61, 1);
+$cardBorder: rgba(255, 246, 214, 1);
+$focusRing: rgba(182, 204, 226, 1);
 $modalBg: rgba(128, 195, 255, 0.25);
-$activeNav: #D3E0EE;
+$activeNav: rgba(211, 224, 238, 1);
