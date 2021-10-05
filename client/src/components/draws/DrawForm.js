@@ -23,7 +23,7 @@ const DrawForm = () => {
     <div className={styles.container}>
       
       <div>
-
+        Illuminate your path...
       </div>
 
       <form onSubmit={handleSubmit}>
