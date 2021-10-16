@@ -24,11 +24,6 @@ const App = () => {
   return (
     <>
       <Router>
-
-        {/* <div className={styles.nav}>
-          <Nav />
-        </div> */}
-
         <div className={styles.app}>
           <div className={styles.nav}>
             <Nav />
@@ -43,7 +38,6 @@ const App = () => {
           <div className={styles.title}>
             <h1>Seeking Guidance</h1>
           </div>
-
         </div>
 
       </Router>
