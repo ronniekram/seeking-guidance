@@ -1,33 +1,19 @@
 import React, { useState } from 'react';
 // Pkg imports
-import { useSprings, animated } from 'react-spring';
 import { CSSTransition} from 'react-transition-group';
 
 // Component imports
 import Card from './Card';
-
-// Helper imports
-// import { calcXY, perspective } from '../../helpers';
+import AnimateCard from './AnimateCard';
 
 // Style imports
 import fadeTransition from '../../assets/styles/cards/fade.module.scss';
 import styles from '../../assets/styles/cards/cards.module.scss';
 
 const Cards = ({ cards }) => {
+
   const [card, setCard] = useState(cards[0]);
   const [inProp, setInProp] = useState(false);
-
-  // const [props, set] = useSpring(() => ({
-  //   xys: [0, 0, 1],
-  //   config: { mass: 5, tension: 200, friction: 100 },
-  // }));
-
-  // const springs = useSprings(cards.length,
-  //   cards.map((item, i) => ({
-  //     xys: [0, 0, 1],
-  //     config: { mass: 5, tension: 200, friction: 100 },
-  //   }))
-  // );
 
   const handleClick = (card) => {
     setCard(card)
@@ -38,13 +24,13 @@ const Cards = ({ cards }) => {
     if (cards) {
       return cards.map(card => {
         return (
-          <div className={styles.card}>
+          <AnimateCard styles={styles.card}>
             <img 
               src={card.image} 
               onClick={() => {handleClick(card)} } 
               alt={card.name} 
             />
-          </div>
+          </AnimateCard>
         )
       })
     }
