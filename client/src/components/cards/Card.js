@@ -1,6 +1,9 @@
 import React from 'react';
+
+// Style & img imports
 import sword from '../../assets/svg/sword.svg';
 import styles from '../../assets/styles/cards/card.module.scss';
+
 
 const Card = ({ card }) => {
 

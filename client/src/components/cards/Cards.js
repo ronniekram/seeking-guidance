@@ -1,12 +1,32 @@
 import React, { useState } from 'react';
+// Pkg imports
+import { useSpring, animated } from 'react-spring';
 import { CSSTransition} from 'react-transition-group';
+
+// Component imports
 import Card from './Card';
+
+// Style imports
 import fadeTransition from '../../assets/styles/cards/fade.module.scss';
 import styles from '../../assets/styles/cards/cards.module.scss';
+
+const calcXY = (x, y) => [
+  -(y - window.innerHeight / 2) / 15,
+  (x - window.innerWidth / 2) / 15,
+  1.0,
+];
+
+const perspective = (x, y, s) =>
+  `perspective(500px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 const Cards = ({ cards }) => {
   const [card, setCard] = useState(cards[0]);
   const [inProp, setInProp] = useState(false);
+
+  const [props, set] = useSpring(() => ({
+    xys: [0, 0, 1],
+    config: { mass: 5, tension: 200, friction: 100 },
+  }));
 
   const handleClick = (card) => {
     setCard(card)
@@ -18,13 +38,18 @@ const Cards = ({ cards }) => {
     if (cards) {
       return cards.map(card => {
         return (
-          <div className={styles.card}>
+          <animated.div 
+            className={styles.card}
+            onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calcXY(x, y) })}
+            onMouseLeave={() => set({ xys: [0, 0, 1] })}
+            style={{ transform: props.xys.interpolate(perspective) }}
+          >
             <img 
               src={card.image} 
               onClick={() => {handleClick(card)} } 
               alt={card.name} 
             />
-          </div>
+          </animated.div>
         )
       })
     }
