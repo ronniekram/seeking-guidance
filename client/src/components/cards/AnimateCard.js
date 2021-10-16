@@ -49,6 +49,7 @@ const AnimateCard = ({ children, styles }) => {
   const animateStyle = {
     // If hovered we want it to overlap other cards when it scales up
     zIndex: isHovered ? 2 : 1,
+    filter: `drop-shadow(0px 8px 6px rgba(0, 0, 0, 0.35))`,
     // Interpolate function to handle css changes
     transform: animatedProps.xys.interpolate(
       (x, y, s) =>
