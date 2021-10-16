@@ -19,6 +19,7 @@ const calcXY = (x, y) => [
 const perspective = (x, y, s) =>
   `perspective(500px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
+  // Writing in a comment to see if fuckin' git commits are working.
 const Cards = ({ cards }) => {
   const [card, setCard] = useState(cards[0]);
   const [inProp, setInProp] = useState(false);
