@@ -7,7 +7,6 @@ import Landing from './layout/Landing';
 import Draws from './draws/Draws';
 import Draw from './draws/Draw';
 import DrawForm from './draws/DrawForm';
-import Single from './cards/Single';
 
 import { getCards } from '../redux/actions/card';
 import { getDraws } from '../redux/actions/draw';
@@ -39,7 +38,6 @@ const App = () => {
             <Route exact path="/draws/new" component={DrawForm} />
             <Route exact path="/draws" component={Draws} />
             <Route path="/draws/:id" component={Draw} />
-            <Route path="/card" component={Single} />
           </Switch>
 
           <div className={styles.title}>
