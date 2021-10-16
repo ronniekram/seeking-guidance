@@ -1,50 +1,50 @@
 import React, { useState } from 'react';
 // Pkg imports
-import { useSpring, animated } from 'react-spring';
+import { useSprings, animated } from 'react-spring';
 import { CSSTransition} from 'react-transition-group';
 
 // Component imports
 import Card from './Card';
 
 // Helper imports
-import { calcXY, perspective } from '../../helpers';
+// import { calcXY, perspective } from '../../helpers';
 
 // Style imports
 import fadeTransition from '../../assets/styles/cards/fade.module.scss';
 import styles from '../../assets/styles/cards/cards.module.scss';
 
-  // Writing in a comment to see if fuckin' git commits are working.
 const Cards = ({ cards }) => {
   const [card, setCard] = useState(cards[0]);
   const [inProp, setInProp] = useState(false);
 
-  const [props, set] = useSpring(() => ({
-    xys: [0, 0, 1],
-    config: { mass: 5, tension: 200, friction: 100 },
-  }));
+  // const [props, set] = useSpring(() => ({
+  //   xys: [0, 0, 1],
+  //   config: { mass: 5, tension: 200, friction: 100 },
+  // }));
+
+  // const springs = useSprings(cards.length,
+  //   cards.map((item, i) => ({
+  //     xys: [0, 0, 1],
+  //     config: { mass: 5, tension: 200, friction: 100 },
+  //   }))
+  // );
 
   const handleClick = (card) => {
     setCard(card)
     setInProp(true);
   };
 
-
   const renderCards = () => {
     if (cards) {
       return cards.map(card => {
         return (
-          <animated.div 
-            className={styles.card}
-            onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calcXY(x, y) })}
-            onMouseLeave={() => set({ xys: [0, 0, 1] })}
-            style={{ transform: props.xys.interpolate(perspective) }}
-          >
+          <div className={styles.card}>
             <img 
               src={card.image} 
               onClick={() => {handleClick(card)} } 
               alt={card.name} 
             />
-          </animated.div>
+          </div>
         )
       })
     }
